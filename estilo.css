@@ -1,4 +1,156 @@
-html, body {
-    margin : 0;
+*,
+*::before,
+*::after {
+    margin: 0;
     padding: 0;
+    box-sizing: inherit;
+}
+
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+header {
+    width: 100%;
+    height: 12vh;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    background-color: #212529;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 18px;
+
+}
+
+
+nav ul li a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    background-color: rgb(54, 54, 50);
+}
+
+nav ul li a.active {
+    border-bottom: 3px solid #3D84C6; /* White underline for active item */
+}
+
+/* Optional: Smooth transition for the border */
+nav ul li a {
+    transition: border-bottom 0.3s ease;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+}
+
+
+.name {
+    position: relative;
+    width: 65vw;
+    height: 9vh;
+    top: 24vh;
+    margin-left: 23vw;
+    font-size: 5vw;
+    color: white;
+}
+
+.des {
+    position: relative;
+    top: 28vh;
+    margin-left: 36vw;
+    font-size: 3vw; /* Larger for visibility */
+    color: white; /* Dark color, adjust to match your design */
+    display: inline-block; /* Prevents layout jumps */
+    white-space: nowrap; /* Keeps text on one line */
+}
+
+
+.des::after {
+    content: "|";
+    display: inline;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.contacto {
+    margin-top: 45vh; 
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+}
+
+.contact-option {
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%; 
+    background-color: #ccc; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-option:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styles for each platform */
+.linkedin {
+    background-color: white; 
+}
+
+.github {
+    background-color: white; 
+}
+
+.email {
+    background-color: white; 
+}
+
+/* Optional: Add icons using pseudo-elements */
+.linkedin::before {
+    content: "in"; 
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.github::before {
+    content: "GH"; 
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.email::before {
+    content: "@"; 
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
 }
