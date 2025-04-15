@@ -7,17 +7,26 @@
 }
 
 
-html, body {
+html, body{
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: #121212;
+}
 
 
 header {
     width: 100%;
-    height: 12vh;
+    height: 11vh;
 }
 
 nav {
@@ -31,8 +40,7 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 18px;
-
+    padding: 25px;
 }
 
 
@@ -40,7 +48,7 @@ nav ul li a {
     margin-left: 20px;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.9vw;
 }
 
 nav ul li a:hover {
@@ -56,11 +64,6 @@ nav ul li a {
     transition: border-bottom 0.3s ease;
 }
 
-main {
-    width: 100%;
-    height: 100%;
-    background-color: #121212;
-}
 
 
 .name {
@@ -68,7 +71,7 @@ main {
     width: 65vw;
     height: 9vh;
     top: 24vh;
-    margin-left: 23vw;
+    margin-left: 21vw;
     font-size: 5vw;
     color: white;
 }
@@ -76,7 +79,7 @@ main {
 .des {
     position: relative;
     top: 28vh;
-    margin-left: 36vw;
+    margin-left: 34vw;
     font-size: 3vw; /* Larger for visibility */
     color: white; /* Dark color, adjust to match your design */
     display: inline-block; /* Prevents layout jumps */
@@ -125,32 +128,129 @@ main {
     background-color: white; 
 }
 
+.linkedin img {
+    width: 3vw;
+}
+
 .github {
     background-color: white; 
 }
+
+.github img {
+    width: 3.2vw;
+}
+
 
 .email {
     background-color: white; 
 }
 
-/* Optional: Add icons using pseudo-elements */
-.linkedin::before {
-    content: "in"; 
+.email img {
+    width: 3.5vw;
+}
+
+
+.linkedin::before { 
     color: rgb(0, 0, 0);
     font-size: 24px;
     font-weight: bold;
 }
 
 .github::before {
-    content: "GH"; 
     color: rgb(0, 0, 0);
     font-size: 24px;
     font-weight: bold;
 }
 
-.email::before {
-    content: "@"; 
+.email::before { 
     color: rgb(0, 0, 0);
     font-size: 24px;
     font-weight: bold;
 }
+
+
+
+/*-----------Objetivos--------*/
+.objetivos {
+    position: relative;
+    margin-top: 15vh;
+    margin-left: 26vw;
+    font-size: 4vw; /* Larger for visibility */
+    color: white; /* Dark color, adjust to match your design */
+    display: inline-block; /* Prevents layout jumps */
+    white-space: nowrap; /* Keeps text on one line */
+}
+
+.text1 {
+    color: white;
+    width: 45vw;
+    height: 30vh;
+    margin-left: 2vw;
+    font-size: 2vw;
+    margin-top: 3vw;
+}
+
+
+/*------- sobre mi ---------*/
+
+
+.sobre_mi h1 {
+    position: relative;
+    margin-top: 25vh;
+    margin-left: 43vw;
+    font-size: 4vw; /* Larger for visibility */
+    color: white; /* Dark color, adjust to match your design */
+    display: inline-block; /* Prevents layout jumps */
+    white-space: nowrap; /* Keeps text on one line */
+}
+
+.text2 {
+    color: white;
+    width: 45vw;
+    height: 30vh;
+    margin-left: 2vw;
+    font-size: 1.5vw;
+    margin-top: 3vw;
+    margin-left: 27vw;
+    text-align: center;
+}
+
+/*------- certificaciones ---------*/
+
+.certificaciones h1 {
+    position: relative;
+    margin-top: 50vh;
+    margin-left: 35vw;
+    font-size: 4vw; /* Larger for visibility */
+    color: white; /* Dark color, adjust to match your design */
+    display: inline-block; /* Prevents layout jumps */
+    white-space: nowrap; /* Keeps text on one line */
+}
+
+/*------- Servicios ---------*/
+
+
+.servicios h1 {
+    position: relative;
+    margin-top: 15vh;
+    margin-left: 40.5vw;
+    font-size: 4vw; /* Larger for visibility */
+    color: white; /* Dark color, adjust to match your design */
+    display: inline-block; /* Prevents layout jumps */
+    white-space: nowrap; /* Keeps text on one line */
+}
+
+/*------- Proyectos ---------*/
+
+
+.proyectos h1 {
+    position: relative;
+    margin-top: 15vh;
+    margin-left: 40vw;
+    font-size: 4vw; /* Larger for visibility */
+    color: white; /* Dark color, adjust to match your design */
+    display: inline-block; /* Prevents layout jumps */
+    white-space: nowrap; /* Keeps text on one line */
+}
+
+
