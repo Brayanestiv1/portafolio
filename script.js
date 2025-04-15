@@ -1,27 +1,30 @@
 // efecto de subrayado
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuLinks = document.querySelectorAll('nav ul li a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                menuLinks.forEach(item => item.classList.remove('active'));
-                this.classList.add('active');
-            });
+document.addEventListener('DOMContentLoaded', () => {
+    const menuLinks = document.querySelectorAll('nav ul div a');
+    
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+           
+            menuLinks.forEach(item => item.classList.remove('active'));
+            
+            this.classList.add('active');
+
+            const targetId = this.getAttribute('href');
+            
+            if (targetId.startsWith('#')) {
+                e.preventDefault(); 
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
         });
     });
+});
 
 
-    // efecto de escritura
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuLinks = document.querySelectorAll('nav ul li a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault(); 
-                menuLinks.forEach(item => item.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
+   
     
         // Typing effect logic
         const typingElement = document.getElementById('typing-text');
@@ -60,4 +63,4 @@
     
         
         typeEffect();
-    });
+    ;
