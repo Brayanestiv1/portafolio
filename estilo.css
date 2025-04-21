@@ -1,263 +1,230 @@
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    scroll-behavior: smooth !important;
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2e7d32;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-
-
-main {
-    width: 100%;
-    height: calc(100vh - 73px);
-    background-color: #121212;
-    overflow: auto;
-    scroll-behavior: smooth !important;
+.navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-
-header {
-    width: 100%;
-    height: 74px;
-    scroll-behavior: smooth !important;
-}
-
-nav {
-    width: 100%;
-    height: 100%;
-    background-color: #212529;
-    scroll-behavior: smooth !important;
-    
-}
-
-
-nav .navbar {
+.nav-links {
     display: flex;
-    justify-content: center;
     list-style: none;
-    padding: 25px;
 }
 
+.nav-links li {
+    margin-left: 2rem;
+}
 
-nav .navbar div a {
-    margin-left: 20px;
+.nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 1.9vw;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-nav .navbar div a:hover {
-    background-color: rgb(54, 54, 50);
+.nav-links a:hover {
+    color: #a5d6a7;
 }
 
-nav .navbar div a.active {
-    border-bottom: 3px solid #3D84C6; 
-}
-
-
-nav .navbar div a {
-    transition: border-bottom 0.3s ease;
-}
-
-
-
-.name {
-    position: relative;
-    width: 65vw;
-    height: 9vh;
-    top: 24vh;
-    margin-left: 21vw;
-    font-size: 5vw;
+.menu-toggle {
+    display: none;
     color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.des {
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
     position: relative;
-    top: 28vh;
-    margin-left: 34vw;
-    font-size: 3vw; /* Larger for visibility */
-    color: white; /* Dark color, adjust to match your design */
-    display: inline-block; /* Prevents layout jumps */
-    white-space: nowrap; /* Keeps text on one line */
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
 
-.des::after {
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero .des {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero .des::after {
     content: "|";
-    display: inline;
     animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    50% { opacity: 0; }
 }
 
 .contacto {
-    margin-top: 45vh; 
     display: flex;
-    justify-content: center; 
-    gap: 30px; 
+    justify-content:center ;
+    gap: 1.5rem;
 }
 
 .contact-option {
-    width: 60px; 
-    height: 60px;
-    border-radius: 50%; 
-    background-color: #ccc; 
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    cursor: pointer; 
+    align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-option:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Specific styles for each platform */
-.linkedin {
-    background-color: white; 
+.contact-option i {
+    font-size: 1.5rem;
+    color: #2e7d32;
 }
 
-.linkedin img {
-    width: 3vw;
+/* Sections */
+.section {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+    margin: 1rem 0;
 }
 
-.github {
-    background-color: white; 
+.section h2 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.github img {
-    width: 3.2vw;
+.sobre-mi-content, .certificaciones-content, .servicios-content, .proyectos-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-
-.email {
-    background-color: white; 
-}
-
-.email img {
-    width: 3.5vw;
-}
-
-
-.linkedin::before { 
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.github::before {
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.email::before { 
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    font-weight: bold;
-}
-
-
-
-/*-----------Objetivos--------*/
-.objetivos {
-    position: relative;
-    margin-top: 15vh;
-    margin-left: 26vw;
-    font-size: 4vw; /* Larger for visibility */
-    color: white; /* Dark color, adjust to match your design */
-    display: inline-block; /* Prevents layout jumps */
-    white-space: nowrap; /* Keeps text on one line */
-}
-
-.text1 {
-    color: white;
-    width: 45vw;
-    height: 30vh;
-    margin-left: 2vw;
-    font-size: 2vw;
-    margin-top: 3vw;
-}
-
-
-/*------- sobre mi ---------*/
-
-
-.sobre_mi h1 {
-    position: relative;
-    margin-top: 25vh;
-    margin-left: 43vw;
-    font-size: 4vw; /* Larger for visibility */
-    color: white; /* Dark color, adjust to match your design */
-    display: inline-block; /* Prevents layout jumps */
-    white-space: nowrap; /* Keeps text on one line */
-}
-
-.text2 {
-    color: white;
-    width: 45vw;
-    height: 30vh;
-    margin-left: 2vw;
-    font-size: 1.5vw;
-    margin-top: 3vw;
-    margin-left: 27vw;
+.card {
+    background-color: #f1f8e9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/*------- certificaciones ---------*/
-
-.certificaciones h1 {
-    position: relative;
-    margin-top: 50vh;
-    margin-left: 35vw;
-    font-size: 4vw; /* Larger for visibility */
-    color: white; /* Dark color, adjust to match your design */
-    display: inline-block; /* Prevents layout jumps */
-    white-space: nowrap; /* Keeps text on one line */
+.card h3 {
+    font-size: 1.5rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
 }
 
-/*------- Servicios ---------*/
-
-
-.servicios h1 {
-    position: relative;
-    margin-top: 15vh;
-    margin-left: 40.5vw;
-    font-size: 4vw; /* Larger for visibility */
-    color: white; /* Dark color, adjust to match your design */
-    display: inline-block; /* Prevents layout jumps */
-    white-space: nowrap; /* Keeps text on one line */
+.card p, .card ul {
+    font-size: 1rem;
+    color: #333;
 }
 
-/*------- Proyectos ---------*/
-
-
-.proyectos h1 {
-    position: relative;
-    margin-top: 15vh;
-    margin-left: 40vw;
-    font-size: 4vw; /* Larger for visibility */
-    color: white; /* Dark color, adjust to match your design */
-    display: inline-block; /* Prevents layout jumps */
-    white-space: nowrap; /* Keeps text on one line */
+.card ul {
+    list-style: none;
+    text-align: left;
 }
 
+.card ul li {
+    margin-bottom: 0.5rem;
+}
 
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #2e7d32;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .des {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+}

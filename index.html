@@ -1,91 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Portafolio - Brayan Vera</title>
     <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="navbar">
-                <div><a href="#inicio">Inicio</a></div>
-                <div><a href="#objetivos">Objetivos</a></div>
-                <div><a href="#sobre_mi">Sobre mi</a></div>
-                <div><a href="#certificaciones">Certificaciones</a></div>
-                <div><a href="#servicios">Servicios</a></div>
-                <div><a href="#proyectos">Proyetos</a></div>
-            </div>
+        <nav class="navbar">
+            <div class="logo">Brayan Vera</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#sobre_mi">Sobre Mí</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         </nav>
     </header>
 
     <main>
-        <div id="inicio">
-            <h1 class="name">Brayan David Vera Mesa</h1>
-
-            <div class="des" id="typing-text"></div>
-
-            <div class="contacto">
-                <div class="contact-option linkedin"><img src="img/linkedin.png""></div>
-                <div class="contact-option github"><img src="img/githup.png" alt=""></div>
-                <div class="contact-option email"><img src="img/correo.png" alt=""></div>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Brayan David Vera Mesa</h1>
+                <p id="typing-text" class="des">Desarrollador Backend | Diseñador Web</p>
+                <div class="contacto">
+                    <a href="https://www.linkedin.com/in/brayan-vera-864929338/" target="_blank" class="contact-option linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Brayanestiv1" target="_blank" class="contact-option github"><i class="fab fa-github"></i></a>
+                    <a href="mailto:cuentaestudio@gmail.com" class="contact-option gmail"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div id="objetivos">
-            <h1 class="objetivos">Objetivos Profesionales</h1>
+        <section id="objetivos" class="section">
+            <h2>Objetivos Profesionales</h2>
+            <p>Mi objetivo es aplicar mis habilidades en desarrollo backend con Python, Java y bases de datos como MySQL, así como mi experiencia en diseño web con HTML, CSS y JavaScript, para crear soluciones tecnológicas innovadoras. Busco colaborar en equipos ágiles, aprendiendo continuamente y contribuyendo a proyectos que combinen funcionalidad y creatividad.</p>
+        </section>
 
-            <p class="text1">Mi objetivo es aplicar mis habilidades en desarrollo backend con Python, 
-                Java y bases de datos como MySQL, así como mi experiencia en diseño web 
-                con HTML, CSS y JavaScript, para crear soluciones tecnológicas innovadoras. 
-                Busco colaborar en equipos ágiles, aprendiendo continuamente y contribuyendo 
-                a proyectos que combinen funcionalidad y creatividad.</p>
-        </div>
+        <section id="sobre_mi" class="section">
+            <h2>Sobre Mí</h2>
+            <div class="sobre-mi-content">
+                <div class="card">
+                    <h3>Misión</h3>
+                    <p>Desarrollar soluciones tecnológicas innovadoras y funcionales que combinen mi experiencia en programación backend, diseño web y gestión de bases de datos.</p>
+                </div>
+                <div class="card">
+                    <h3>Visión</h3>
+                    <p>Convertirme en un profesional referente en el desarrollo full-stack, liderando proyectos que integren tecnología, creatividad y eficiencia.</p>
+                </div>
+                <div class="card">
+                    <h3>Valores</h3>
+                    <ul>
+                        <li><strong>Innovación:</strong> Resolver problemas con creatividad.</li>
+                        <li><strong>Colaboración:</strong> Trabajar en equipo para resultados excepcionales.</li>
+                        <li><strong>Calidad:</strong> Entregar soluciones robustas y optimizadas.</li>
+                        <li><strong>Aprendizaje:</strong> Adquirir nuevos conocimientos continuamente.</li>
+                        <li><strong>Responsabilidad:</strong> Cumplir con profesionalismo.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <div id="sobre_mi" class="sobre_mi">
-            <h1 class="mision">Mision</h1>
-            <p class="text2">Desarrollar soluciones tecnológicas innovadoras y funcionales que combinen mi 
-                experiencia en programación backend, diseño web y gestión de bases de datos. 
-                Busco crear aplicaciones y sitios web que resuelvan problemas reales, mejoren 
-                la experiencia del usuario y promuevan la colaboración en equipos ágiles.</p>
-        
-                <h1 class="vision">Visión</h1>
-                <p class="text2">Convertirme en un profesional referente en el desarrollo full-stack, liderando 
-                    proyectos que integren tecnología, creatividad y eficiencia. Aspiro a 
-                    contribuir a un mundo digital más accesible y sostenible, aprendiendo 
-                    continuamente y adaptándome a las nuevas tendencias tecnológicas.</p>
+        <section id="certificaciones" class="section">
+            <h2>Certificaciones</h2>
+            <div class="certificaciones-content">
+                <!-- Ejemplo, puedes agregar más -->
+                <div class="card">Certificación en Python - Coursera</div>
+                <div class="card">Certificación en MySQL - Oracle</div>
+                <div class="card">Certificación en Desarrollo Web - FreeCodeCamp</div>
+            </div>
+        </section>
 
-                <h1 class="valores">Valores</h1> 
-                <p class="text2">
-                    <strong>Innovación:</strong> Buscar siempre nuevas formas de resolver problemas mediante el uso creativo de la tecnología.
-                    <br><br>
-                    <strong>Colaboración:</strong> Trabajar en equipo para lograr resultados excepcionales, valorando las ideas y aportes de todos.
-                    <br><br>
-                    <strong>Calidad:</strong> Comprometerme con la entrega de soluciones robustas, optimizadas y bien diseñadas
-                    <br><br>
-                    <strong>Aprendizaje continuo:</strong> Mantener una mentalidad abierta para adquirir nuevos conocimientos y mejorar mis habilidades.
-                    <br><br>
-                    <strong>Responsabilidad:</strong> Cumplir con los objetivos establecidos, asegurando confianza y profesionalismo en cada proyecto.
-                </p>
-                <br><br>
+        <section id="servicios" class="section">
+            <h2>Servicios</h2>
+            <div class="servicios-content">
+                <div class="card">Desarrollo Backend (Python, Java, MySQL)</div>
+                <div class="card">Diseño Web (HTML, CSS, JavaScript)</div>
+                <div class="card">Gestión de Bases de Datos</div>
+            </div>
+        </section>
 
-        </div>
-
-        <div id="certificaciones"  class="certificaciones">
-            <h1>Certificaciones</h1>
-        </div>
-
-        <div id="servicios"  class="servicios">
-            <h1>Servicios</h1>
-        </div>
-
-        <div id="proyectos" class="proyectos">
-            <h1>Proyectos</h1>
-        </div>
-
+        <section id="proyectos" class="section">
+            <h2>Proyectos</h2>
+            <div class="proyectos-content">
+                <div class="card proyecto-card">
+                    <h3>Sistema de Gestión de Parques Naturales</h3>
+                    <p>Diseñé y desarrollé una base de datos en MySQL para gestionar parques naturales en Colombia, incluyendo departamentos, áreas, especies, personal, proyectos de investigación, visitantes y alojamientos. La base está normalizada hasta la 4ª Forma Normal y contiene datos realistas para 20 registros por tabla, con un diseño escalable a 50. Utilicé SQL para crear tablas, insertar datos y asegurar relaciones coherentes.</p>
+                    <p><strong>Tecnologías:</strong> MySQL, SQL</p>
+                    <p><strong>Características:</strong> Normalización, claves foráneas, datos semi-realistas.</p>
+                </div>
+                <!-- Agrega más proyectos si deseas -->
+            </div>
+        </section>
     </main>
 
+    <footer>
+        <p>&copy; 2025 Brayan David Vera Mesa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
